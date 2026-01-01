@@ -1,0 +1,24 @@
+THM - PickleRick
+Date - 1st Sept 2025
+Target IP - 10.201.56.73
+
+OPEN PORTS - nmap
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+
+Credentials :-
+| Username - R1ckRul3s
+| Password - Wubbalubbadubdub
+
+Random Finds :-
+<!-- Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVkliRmhoTVhCb1ZsWmFWMVpWTVVWaGVqQT0== -->
+Command disabled to make it hard for future PICKLEEEE RICCCKKKK. 
+
+Clues :-
+| clue.txt --> Look around the file system for the other ingredient.
+
+FLAGS FOUND :- 
+| Sup3rS3cretPickl3Ingred.txt --> mr. meeseek hair
+| second ingredient --> 1 jerry tear
+| 3rd.txt --> fleeb juice

@@ -1,0 +1,14 @@
+HTB - Flag Command
+Date - 23rd August 2025
+Target IP - 94.237.49.23
+Port - 56912
+
+OPEN PORTS :- Nmap
+22/tcp  open  ssh     OpenSSH 9.2p1 Debian 2+deb12u3 (protocol 2.0)
+111/tcp open  rpcbind 2-4 (RPC #100000)
+
+Accessible :- http://94.237.49.23:56912/
+
+Credentials :- Blip-blop, in a pickle with a hiccup! Shmiggity-shmack
+
+FLAGS :- HTB{D3v3l0p3r_t00l5_4r3_b35t__t0015_wh4t_d0_y0u_Th1nk??}

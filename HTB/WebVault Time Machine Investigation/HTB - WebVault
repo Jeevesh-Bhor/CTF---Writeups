@@ -1,0 +1,13 @@
+HTB - WebVault Time Machine Investigation
+Date - 31st August 2025
+Target IP - 94.237.57.115
+PORT - 42997
+
+OPEN PORTS - nmap
+PORT      STATE    SERVICE         VERSION
+19/tcp    filtered chargen
+22/tcp    open     ssh             OpenSSH 9.2p1 Debian 2+deb12u3 (protocol 2.0)
+111/tcp   open     rpcbind         2-4 (RPC #100000)
+
+FLAG - 
+| HTB{Former_RivalTech_Marketing_Specialist}

@@ -1,0 +1,11 @@
+THM - Takeover
+Date - 21st August 2025
+Target IP - 10.201.35.204
+
+/etc/host/ --> sudo nano hosts --> 10.201.35.204/futurevera.thm
+
+Subdomains FOUND - 
+blog.futurevera.thm
+support.futurevera.thm
+
+Support - Open Certificate with http:// in the search bar then you get the FLAG ------> flag{beea0d6edfcee06a59b83fb50ae81b2f} 

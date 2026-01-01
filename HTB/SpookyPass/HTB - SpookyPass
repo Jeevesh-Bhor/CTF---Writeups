@@ -1,0 +1,13 @@
+HTB - SpookyPass
+Date - 31st August 2025
+Target IP - None
+Port - None
+
+Files :-
+| SpookyPass.zip --> rev_spookypass
+| rev_spookypass --> pass (executable file)
+| pass --> strings pass > strings_pass.txt
+| strings_pass.txt --> s3cr3t_p455_f0r_gh05t5_4nd_gh0ul5 [ Password ]
+| Run 'pass' --> Enter the Password
+
+FLAG FOUND :- HTB{un0bfu5c4t3d_5tr1ng5}

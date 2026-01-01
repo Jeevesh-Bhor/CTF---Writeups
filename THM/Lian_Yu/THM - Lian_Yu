@@ -1,0 +1,27 @@
+THM - Lian-Yu
+Date - 20th August 2025
+Target IP - 10.201.76.173
+
+Web Directory - island ------> Code "vigilante"
+Web Directory - 2100 [10.201.76.173/island/]
+
+File Name - /green_arrow.ticket [10.201.76.173/island/2100] ----> "RTy8yhBQdscX"
+
+RTy8yhBQdscX -------> "!#th3h00d" (from Base58)
+
+ftp - vigilante ------> "!#th3h00d" (password) [LOGIN] 
+ftp - slade -------> another directory in "home" (not accessible yet)
+
+PNG ------> 89 50 4E 47 0D 0A 1A 0A
+
+Leave_me_alone.png ---------> "password" [Passphrase/Code]
+aa.jpg --------> passwd.txt (Regular Text File)
+       --------> shado (Clarion Developer (v2 and above) memo data)
+
+VIGILANTE LOGIN - ftp
+.other_user - Slade Wilson, Adeline Kane, Wintergreen, Jackal, Joseph Wilson
+
+SLADE LOGIN - ssh
+user.txt -----> THM{P30P7E_K33P_53CRET5__C0MPUT3R5_D0N'T} -- Felicity Smoak
+root.txt -----> THM{MY_W0RD_I5_MY_B0ND_IF_I_ACC3PT_YOUR_CONTRACT_THEN_IT_WILL_BE_COMPL3TED_OR_I'LL_BE_D34D}
+

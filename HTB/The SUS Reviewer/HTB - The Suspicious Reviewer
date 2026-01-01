@@ -1,0 +1,13 @@
+HTB - The Suspicious Reviewer
+Date - 23rd August 2025
+Target IP - 83.136.253.59
+Port - 54638
+
+OPEN PORTS :- Nmap
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 9.2p1 Debian 2+deb12u3 (protocol 2.0)
+111/tcp open  rpcbind 2-4 (RPC #100000)
+
+Credentials - TechReviewer2024
+
+FLAGS :- HTB{alex.morgan@tempmail.com}
